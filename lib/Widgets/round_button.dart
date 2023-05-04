@@ -10,7 +10,7 @@ class RoundButton extends StatelessWidget {
        required this.text,
        this.press, 
       this.verticlePadding = 16, 
-      this.fontSize = 16,
+      this.fontSize = 16, 
   }) ;
 
   @override
