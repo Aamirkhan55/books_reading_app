@@ -1,3 +1,4 @@
+import 'package:books_reading_app/Screens/details_screen.dart';
 import 'package:books_reading_app/Widgets/book_rating.dart';
 import 'package:books_reading_app/Widgets/read_button.dart';
 import 'package:books_reading_app/constants.dart';
@@ -50,7 +51,14 @@ class HomeScreen extends StatelessWidget {
                           title: 'Crushing & Influence',
                           author: 'Gray Venchuk',
                           rating: 4.9,
-                          pressDetails: () {},
+                          pressDetails: () {
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(
+                                builder: (context) {
+                                 return const DetailScreen();
+                            }));
+                          },
                           pressRead: () {},
                         ),
                         ReadingListCard(

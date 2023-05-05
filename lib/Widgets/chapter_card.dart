@@ -3,15 +3,24 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class ChapterCard extends StatelessWidget {
+  final String name;
+  final String tag;
+  final int chapterNumber;
+  final VoidCallback press;
+
   const ChapterCard({
-    super.key,
-    required this.size,
+  super.key, 
+  required this.name, 
+  required this.tag, 
+  required this.chapterNumber, 
+   required this.press,
   });
 
-  final Size size;
+ 
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
       margin: const EdgeInsets.only(bottom: 16),
@@ -30,26 +39,28 @@ class ChapterCard extends StatelessWidget {
       child: Row(
         children: <Widget>[
           RichText(
-            text: const TextSpan(
+            text: TextSpan(
               children: [
                 TextSpan(
-                  text: 'Chapter 1 : Money',
-                  style: TextStyle(
+                  text: 'Chapter $chapterNumber : $name \n',
+                  style: const  TextStyle(
                     fontSize: 16,
                     color: kLigthBlackColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                TextSpan(
-                  text: 'Life is about change',
-                  style: TextStyle(color: kLigthBlackColor),
+                 TextSpan(
+                  text: tag,
+                  style: const TextStyle(
+                    color: kLigthBlackColor,
+                    ),
                 ),
               ],
             ),
             ),
             const Spacer(),
             IconButton(
-             onPressed: () {}, 
+             onPressed: press, 
             icon: const Icon(
               Icons.arrow_forward_ios,
               size: 18,
