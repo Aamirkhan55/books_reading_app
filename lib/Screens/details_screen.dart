@@ -102,7 +102,7 @@ class DetailScreen extends StatelessWidget {
                   const SizedBox(height: 10),
                   Stack(
                     children: [
-                      Container(
+                      const SizedBox(
                         height: 180,
                         width: double.infinity,
                       ),
@@ -142,8 +142,8 @@ class DetailScreen extends StatelessWidget {
                                   ],
                                   ),
                                   ),
-                                  Row(
-                                    children: const <Widget>[
+                                  const Row(
+                                    children:  <Widget>[
                                       BookRating(
                                         score: 4.9,
                                         ),

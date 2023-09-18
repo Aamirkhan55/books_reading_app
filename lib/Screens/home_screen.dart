@@ -130,11 +130,11 @@ class HomeScreen extends StatelessWidget {
                                     padding: const EdgeInsets.only(left: 30, right: 20),
                                     child: Row(
                                       children: [
-                                        Expanded(
+                                        const Expanded(
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.end,
                                             crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: const <Widget>[
+                                            children: <Widget>[
                                               Text(
                                                 'Crushing & Influence',
                                                 style: TextStyle(
@@ -234,8 +234,8 @@ class HomeScreen extends StatelessWidget {
                       style: TextStyle(color: kLigthBlackColor),
                     ),
                     const SizedBox(height: 10),
-                    Row(
-                      children: const <Widget>[
+                    const Row(
+                      children: <Widget>[
                         BookRating(
                           score: 4.9,
                         ),
