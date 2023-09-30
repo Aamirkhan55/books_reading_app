@@ -67,7 +67,7 @@ class ReadingListCard extends StatelessWidget {
               )),
           Positioned(
               top: 160,
-              child: Container(
+              child: SizedBox(
                 height: 85,
                 width: 202,
                 child: Column(

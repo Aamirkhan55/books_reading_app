@@ -33,9 +33,9 @@ class BookInfo extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Expanded(
+                const Expanded(
                   child: Column(
-                    children: const <Widget>[
+                    children: <Widget>[
                       Text('When the earth was flat everyone wanted to win the game of the best and people and winning with A game with all the thing you have',
                       maxLines: 5,
                       style: TextStyle(
